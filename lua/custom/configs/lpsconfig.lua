@@ -13,10 +13,12 @@ lspconfig.rust_analyzer.setup({
       cargo = {
         allFeatures = true,
         locadOutDirsFromCheck = true,
+        runBuildScripts = true,
       },
-      cehckOnSave = {
+      checkOnSave = {
         allFeatures = true,
         command = "clippy",
+        extraArgs = { "--no-deps" },
       },
     },
   },
